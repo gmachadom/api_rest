@@ -2,7 +2,6 @@ package com.products.api_rest.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
@@ -33,7 +32,7 @@ public class Purchase {
     private BigDecimal price;
     @NotNull
     @JsonFormat(pattern="yyyy-MM-dd:mm:ss:SSSZ")
-    private Date purchaseDateTime;
+    private Date purchaseDateTime = new Date();
     @NotNull
     private boolean premium;
 

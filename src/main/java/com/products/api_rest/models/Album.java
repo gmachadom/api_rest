@@ -7,8 +7,6 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name="ALBUMS")
@@ -33,8 +31,8 @@ public class Album {
     @Positive
     private BigDecimal price;
 
-    @ManyToMany(mappedBy = "albums")
-    private List<Purchase> purchases = new ArrayList<Purchase>();
+    //@ManyToMany(mappedBy = "albums")
+    //private List<Purchase> purchases = new ArrayList<Purchase>();
 
     // Getters and Setters
     public int getId() {
@@ -93,11 +91,11 @@ public class Album {
         this.price = price;
     }
 
-    public List<Purchase> getPurchases() {
-        return purchases;
-    }
+    //public List<Purchase> getPurchases() {
+    //    return purchases;
+    //}
 
-    public void setPurchases(List<Purchase> purchases) {
-        this.purchases = purchases;
-    }
+    //public void setPurchases(List<Purchase> purchases) {
+    //    this.purchases = purchases;
+    //}
 }
